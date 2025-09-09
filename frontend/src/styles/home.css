@@ -1,0 +1,38 @@
+/* Home page: hero, stats, featured collections */
+.hero-section { background: var(--hero-gradient); padding: 80px 60px; text-align: center; margin: 0; position: relative; overflow: hidden; width: 100vw; margin-left: calc(-50vw + 50%); min-height: 60vh; display: flex; flex-direction: column; justify-content: center; align-items: center }
+.hero-bg-elements { position: absolute; inset: 0; pointer-events: none; z-index: 1 }
+.floating-shape { position: absolute; border-radius: 50%; background: rgba(255,255,255,.1); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,.2) }
+.shape-1 { width: 80px; height: 80px; top: 20%; left: 10%; background: linear-gradient(45deg, rgba(139,92,246,.3), rgba(34,211,238,.3)) }
+.shape-2 { width: 60px; height: 60px; top: 60%; right: 15%; background: linear-gradient(45deg, rgba(167,139,250,.3), rgba(139,92,246,.3)) }
+.shape-3 { width: 100px; height: 100px; bottom: 20%; left: 20%; background: linear-gradient(45deg, rgba(34,211,238,.3), rgba(167,139,250,.3)) }
+.hero-title { font-size: 4rem; font-weight: 800; color: var(--white); margin: 0 0 24px 0; line-height: 1.1; letter-spacing: -0.025em; position: relative; z-index: 2; display: flex; flex-direction: column; gap: 8px }
+.hero-title .gradient-text { background: linear-gradient(90deg, #ffffff, #e0e7ff, #ffffff); -webkit-background-clip: text; background-clip: text; color: transparent; background-size: 200% 100%; animation: shimmer 3s ease-in-out infinite }
+@keyframes shimmer { 0%, 100% { background-position: 200% 0 } 50% { background-position: -200% 0 } }
+.hero-subtitle { font-size: 1.5rem; color: rgba(255,255,255,.9); margin: 0 0 48px 0; font-weight: 400; position: relative; z-index: 2 }
+.hero-cta { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; position: relative; z-index: 2 }
+.btn.shop-now { background: var(--white); color: var(--accent); border: none; font-weight: 600; padding: 18px 36px; font-size: 1.1rem; border-radius: 8px; transition: all .3s ease; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; position: relative; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,.1) }
+.btn.shop-now::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(139,92,246,.1), transparent); transition: left .5s ease }
+.btn.shop-now:hover::before { left: 100% }
+.btn.shop-now:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(0,0,0,.15) }
+.btn.view-featured { background: transparent; color: var(--white); border: 2px solid var(--white); font-weight: 600; padding: 16px 36px; font-size: 1.1rem; border-radius: 8px; transition: all .3s ease; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; position: relative; overflow: hidden }
+.btn.view-featured::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,.1), transparent); transition: left .5s ease }
+.btn.view-featured:hover::before { left: 100% }
+.btn.view-featured:hover { background: var(--white); color: var(--accent); transform: translateY(-3px); box-shadow: 0 8px 25px rgba(255,255,255,.2) }
+.scroll-indicator { position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); z-index: 2 }
+.scroll-arrow { color: rgba(255,255,255,.8); font-size: 1.5rem; cursor: pointer; transition: color .3s ease }
+.scroll-arrow:hover { color: var(--white) }
+
+.stats-section { display: flex; justify-content: center; gap: 80px; margin: 40px 0 60px 0; flex-wrap: wrap }
+.stat-item { text-align: center; padding: 16px 20px; border-radius: 12px; background: var(--panel); border: 1px solid var(--border); transition: all .3s ease; cursor: pointer; position: relative; overflow: hidden; min-width: 120px }
+.stat-item::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(139,92,246,.05), rgba(34,211,238,.05)); opacity: 0; transition: opacity .3s ease }
+.stat-item:hover::before { opacity: 1 }
+.stat-number { font-size: 2.8rem; font-weight: 800; color: var(--accent); margin-bottom: 8px; line-height: 1; letter-spacing: -0.025em; position: relative; z-index: 1 }
+.stat-label { font-size: 1rem; color: var(--stat-text); font-weight: 500; text-transform: uppercase; letter-spacing: .1em; position: relative; z-index: 1 }
+
+.featured-collections { margin: 20px 0 }
+.collections-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px }
+
+@media (max-width: 1024px) { .hero-section { padding: 60px 40px; min-height: 55vh } .stats-section { gap: 60px; margin: 30px 0 50px 0 } }
+@media (max-width: 768px) { .hero-section { padding: 50px 30px; min-height: 50vh } .hero-cta { flex-direction: column; align-items: center; gap: 20px } .stats-section { gap: 40px; margin: 25px 0 40px 0 } .collections-grid { grid-template-columns: 1fr; gap: 20px } }
+
+

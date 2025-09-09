@@ -1,0 +1,9 @@
+/* Admin actions and buttons extracted */
+.admin-actions { display: flex; gap: 8px; justify-content: center }
+.admin-actions .edit, .admin-actions .delete { border: 0; border-radius: 8px; padding: 8px 10px; cursor: pointer; transition: all .2s ease; display: flex; align-items: center; justify-content: center }
+.admin-actions .edit { background: var(--accent2); color: #fff }
+.admin-actions .delete { background: var(--danger); color: #fff }
+.admin-actions .edit:hover { filter: brightness(.92) }
+.admin-actions .delete:hover { filter: brightness(.9) }
+
+

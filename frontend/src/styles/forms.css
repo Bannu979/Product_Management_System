@@ -1,0 +1,17 @@
+/* Add/Edit product forms */
+.add-product-form { max-width: 700px; margin: 40px auto; background: whitesmoke; border: 1px solid var(--glassBorder); border-radius: 16px; padding: 22px; box-shadow: 0 16px 40px rgba(0,0,0,.25) }
+.add-product-form h2 { margin: 0 0 10px 0 }
+.add-product-form label { display: flex; flex-direction: column; gap: 6px; margin: 12px 0 }
+.add-product-form input, .add-product-form textarea { background: wh; color: var(--text); border: 1px solid var(--glassBorder); padding: 12px 14px; border-radius: 10px }
+.add-product-form input:focus, .add-product-form textarea:focus { outline: none; border-color: var(--accent) }
+.add-product-form textarea { min-height: 100px }
+
+.form-actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 12px }
+.btn.cancel { background: #e5e7eb; color: #111827; border: 0; border-radius: 8px; padding: 10px 14px; cursor: pointer }
+.btn.primary { background: var(--accent); color: #fff; border: 0; border-radius: 8px; padding: 10px 14px; cursor: pointer }
+
+.page.add-product { margin-bottom: 12px }
+.page.add-product .form { transform: scale(.85); transform-origin: top center; max-width: 800px !important }
+.page.add-product .form textarea { min-height: 80px }
+
+

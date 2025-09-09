@@ -1,0 +1,8 @@
+/* High-level layout, navbar, container, and shared variables continue to be inlined in the original file. If needed, migrate more rules here. */
+
+.navbar { position: sticky; top: 0; left: 0; right: 0; height: 80px; background: var(--panel); display: flex; align-items: center; justify-content: space-between; padding: 0 24px; border-bottom: 1px solid var(--border); z-index: 50; box-shadow: 0 1px 3px rgba(0,0,0,.05) }
+
+.btn-add-to-cart { background: linear-gradient(90deg, #7c3aed, #60a5fa); color: white; border: 0; border-radius: 10px; padding: 12px 16px; font-weight: 600; cursor: pointer; transition: all .2s ease; width: 100% }
+.btn-add-to-cart:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(139,92,246,.3) }
+
+
