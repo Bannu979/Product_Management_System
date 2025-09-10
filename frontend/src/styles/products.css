@@ -4,6 +4,10 @@
 .category-btn { background: var(--light-grey); border: 1px solid var(--border); padding: 8px 12px; border-radius: 999px; cursor: pointer }
 .category-btn.active { background: var(--accent); color: #fff; border-color: transparent }
 .search-sort { display: flex; gap: 12px; align-items: center }
+.select-with-icon { position: relative; display: inline-block }
+.sort-select.has-icon { appearance: none; -webkit-appearance: none; -moz-appearance: none; padding-right: 40px }
+.select-icon { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); pointer-events: none; color: #64748b }
+.select-icon svg { display: block }
 .search-input-wrap { position: relative; display: inline-block }
 .search-input { padding: 10px 34px 10px 12px; border: 1px solid var(--border); border-radius: 10px; background: #fff; color: var(--text) }
 .search-input::placeholder { color: #94a3b8 }

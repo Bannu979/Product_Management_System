@@ -234,11 +234,20 @@ export default function Products() {
                   </svg>
                 </button>
               </div>
-              <select value={sort} onChange={(e) => setSort(e.target.value)} className="sort-select">
-                <option value="newest">Latest</option>
-                <option value="low">Price: Low to High</option>
-                <option value="high">Price: High to Low</option>
-              </select>
+              <div className="select-with-icon">
+                <select value={sort} onChange={(e) => setSort(e.target.value)} className="sort-select has-icon">
+                  <option value="newest">Latest</option>
+                  <option value="low">Price: Low to High</option>
+                  <option value="high">Price: High to Low</option>
+                </select>
+                <span className="select-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                    <path d="M3 5h18"/>
+                    <path d="M7 12h10"/>
+                    <path d="M10 19h4"/>
+                  </svg>
+                </span>
+              </div>
             </div>
           </div>
           
